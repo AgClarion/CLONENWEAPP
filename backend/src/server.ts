@@ -6,6 +6,7 @@ import { StartAllWhatsAppsSessions } from "./services/WbotServices/StartAllWhats
 import Company from "./models/Company";
 import { startQueueProcess } from "./queues";
 
+
 const server = app.listen(process.env.PORT, async () => {
   const companies = await Company.findAll();
   const allPromises: any[] = [];
